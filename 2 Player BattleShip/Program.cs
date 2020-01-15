@@ -11,7 +11,7 @@ namespace _2_Player_BattleShip
         static void Main(string[] args)
         {
             Game game = new Game();
-            
+            game.playGame();
         }
     }
 }

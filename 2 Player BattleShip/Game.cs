@@ -33,11 +33,15 @@ namespace _2_Player_BattleShip
         }
         public void intro()
         {
-
+            Console.WriteLine("BATTLESHIP 3000: The Ultimate Battleship experience!\nGoal of the Game: Destroy all opposing player ships");
+            Console.WriteLine("Click any key to continue");
+            Console.ReadLine();
         }
         public void instructions()
         {
-
+            Console.WriteLine("Instructions:\n1) Players will each place ship on gameboard displayed by selecting ship and attaching coordinate\n2)Players select coordinate to attack at the start of each round\n3)Player to first destroy all opposing ships wins!\n");
+            Console.WriteLine("Click any key to continue");
+            Console.ReadLine();
         }
 
     }
