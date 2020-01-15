@@ -8,5 +8,13 @@ namespace _2_Player_BattleShip
 {
     class Ship
     {
+        //member variable
+        public string type;
+        public bool isAlive;
+        public int shipSegments;
+
+        //constructor
+
+        //member method
     }
 }

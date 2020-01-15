@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2_Player_BattleShip
 {
-    class GameBoard
-    {  
-        //member variable
-
-        //constructor
-
-        //member method
+    class Battleship
+    {
     }
 }
