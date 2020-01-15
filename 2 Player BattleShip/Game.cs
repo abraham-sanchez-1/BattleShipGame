@@ -37,8 +37,16 @@ namespace _2_Player_BattleShip
         }
         public void AssignShips(int integer)
         {
-            Console.WriteLine("{0}, please assign ships to coordinates of your board", players[integer].name);
-
+            for (int i = 0; i < players[integer].ships.Count; i++)
+            {
+                int firstCoordinate; int secondCoordinate; int orientation;
+                DisplayBoard(players[integer].gameBoard.playerBoard);
+                Console.WriteLine("{0} is selected\nPlease assign a row and column", players[integer].ships[i].type);
+                firstCoordinate = RowCoordinateSelection();
+                secondCoordinate = ColumnCoordinateSelection();
+                orientation = OrientationSelection(integer,i);
+                //function that uses firstCoordinate, secondCoordinate, orientation
+            }
         }
         public void playGame()
         {
@@ -80,6 +88,65 @@ namespace _2_Player_BattleShip
             //Console.WriteLine(players[1].gameBoard.playerBoard + "\n" + players[1].gameBoard.hitBoard);
 
         }
+        public void ShipAssignHorizontal(Ship ship)
+        {
 
+        }
+        public void ShipAssignVertical(Ship ship)
+        {
+
+        }
+        public int RowCoordinateSelection()
+        {
+            int userSelection = 0;
+            Console.Write("Select Row (1-20):");
+            int.TryParse(Console.ReadLine(), out userSelection);
+            if(userSelection ==0 || userSelection >20)
+            {
+                Console.WriteLine("Input was invalid, make sure you are typing a number between 1-20");
+                RowCoordinateSelection();
+            }
+            return userSelection;
+            
+        }
+        public int ColumnCoordinateSelection()
+        {
+            int userSelection = 0;
+            Console.Write("Select Column (1-20):");
+            int.TryParse(Console.ReadLine(), out userSelection);
+            if (userSelection == 0 || userSelection > 20)
+            {
+                Console.WriteLine("Input was invalid, make sure you are typing a number between 1-20");
+                ColumnCoordinateSelection();
+            }
+            return userSelection;
+        }
+        public int OrientationSelection(int playerIndex,int shipIndex)
+        {
+            int userSelection = 0;
+            int shipNumber = shipIndex;
+            int playerNumber = playerIndex;
+            Console.WriteLine("Orientation of {0}", players[playerNumber].ships[shipNumber].type);
+            Console.WriteLine("1) Horizontal\n2) Vertical");
+            int.TryParse(Console.ReadLine(), out userSelection);
+            switch (userSelection)
+            {
+                case 1:
+                    userSelection = 1;
+                    Console.WriteLine("{0} will be placed horizontally!",players[playerNumber].ships[shipNumber].type);
+                    return userSelection;
+                case 2:
+                    userSelection = 2;
+                    Console.WriteLine("{0} will be placed vertically!", players[playerNumber].ships[shipNumber].type);
+                    return userSelection;
+
+                default:
+                    Console.WriteLine("The option you selected is not valid");
+                    OrientationSelection(shipNumber,shipIndex);
+                    return userSelection;
+                    
+
+            }
+        }
     }
 }
