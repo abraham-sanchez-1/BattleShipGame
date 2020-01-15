@@ -16,16 +16,23 @@ namespace _2_Player_BattleShip
         {
             intro();
             instructions();
-            players = new List<Player>() { new Player(SelectName()), new Player(SelectName()) };
-
+            players = new List<Player>() { new Player("Player 1"), new Player("Player 2") };
+            for (int i = 0; i < 2; i++)
+            {
+                SelectName(i);
+            }
+            
         }
 
         //member method
-        public string SelectName()
+        public void SelectName(int integer)
         {
-            Console.WriteLine("Name for player 1:");
+            Console.WriteLine("Name for {0}:", players[integer].name);
             string userName = Console.ReadLine();
-            return userName;
+            Console.WriteLine("Player name is now: {0}", userName);
+            players[integer].name = userName;
+            Console.WriteLine("Click any key to continue");
+            Console.ReadLine();
         }
         public void playGame()
         {
@@ -39,7 +46,8 @@ namespace _2_Player_BattleShip
         }
         public void instructions()
         {
-            Console.WriteLine("Instructions:\n1) Players will each place ship on gameboard displayed by selecting ship and attaching coordinate\n2)Players select coordinate to attack at the start of each round\n3)Player to first destroy all opposing ships wins!\n");
+            Console.WriteLine("Instructions:\n1) Players will each place ship on gameboard displayed by selecting ship and attaching coordinate\n2) Players select coordinate to attack at the start of each round\n3) Player to first destroy all opposing ships wins!\n");
+            Console.WriteLine("Ship types and hitpoints:\n 1)Aircraft Carrier, |  5 hitpoins\n 2)Battleship,       |  4 hitpoints\n 3)Submarine,        |  3 hitpoints\n 2)Destroyer,        |  2 hitpoints\n");
             Console.WriteLine("Click any key to continue");
             Console.ReadLine();
         }

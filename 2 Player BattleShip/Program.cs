@@ -12,6 +12,9 @@ namespace _2_Player_BattleShip
         {
             Game game = new Game();
             game.playGame();
+
+
+            Console.ReadLine();
         }
     }
 }
