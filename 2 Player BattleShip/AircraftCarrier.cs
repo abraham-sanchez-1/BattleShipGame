@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace _2_Player_BattleShip
 {
-    class AircraftCarrier
+    class AircraftCarrier : Ship
     {
+        //member variable
+
+        //constructor
+        public AircraftCarrier()
+        {
+            this.type = "Aircraft Carrier";
+            this.isAlive = true;
+            this.shipSegments = 5;
+        }
+        //member method
     }
 }

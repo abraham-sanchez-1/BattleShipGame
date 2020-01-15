@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace _2_Player_BattleShip
 {
-    class Destroyer
+    class Destroyer : Ship
     {
+        //member variable
+
+        //constructor
+        public Destroyer()
+        {
+            this.type = "Destroyer";
+            this.isAlive = true;
+            this.shipSegments = 2;
+        }
+        //member method
+
     }
 }
