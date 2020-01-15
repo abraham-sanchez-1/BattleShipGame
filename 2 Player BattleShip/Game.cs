@@ -20,6 +20,7 @@ namespace _2_Player_BattleShip
             for (int i = 0; i < 2; i++)
             {
                 SelectName(i);
+                AssignShips(i);
             }
             
         }
@@ -33,6 +34,11 @@ namespace _2_Player_BattleShip
             players[integer].name = userName;
             Console.WriteLine("Click any key to continue");
             Console.ReadLine();
+        }
+        public void AssignShips(int integer)
+        {
+            Console.WriteLine("{0}, please assign ships to coordinates of your board", players[integer].name);
+
         }
         public void playGame()
         {

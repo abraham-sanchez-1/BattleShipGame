@@ -30,7 +30,7 @@ namespace _2_Player_BattleShip
 
                 for (int j = 0; j < 20; j++)
                 {
-                    array[i, j] = "|  |";
+                    array[i, j] = "( )";
                 }
             }
 
