@@ -24,7 +24,10 @@ namespace _2_Player_BattleShip
         }
 
         //member method
+        public void AssignShipLocation()
+        {
 
+        }
         //can place ships
         //can attack
     }
