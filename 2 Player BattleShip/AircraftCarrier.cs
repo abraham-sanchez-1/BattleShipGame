@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2_Player_BattleShip
 {
-    class AircraftCarrier : Ship
+    public class AircraftCarrier : Ship
     {
         //member variable
 

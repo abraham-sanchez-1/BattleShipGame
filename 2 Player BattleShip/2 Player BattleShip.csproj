@@ -55,6 +55,7 @@
     <Compile Include="Ship.cs" />
     <Compile Include="ShipSegment.cs" />
     <Compile Include="Submarine.cs" />
+    <Compile Include="UserInterface.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
